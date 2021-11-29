@@ -38,35 +38,55 @@ body {
 
  /* Header */
 
-    .header {
-        background: url(/images/pattern-circles.svg) no-repeat center;
-        height: 25%;
-        width: 85%;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        padding: 1em;
-    }
+.header {
+    background: url(/images/pattern-circles.svg) no-repeat center;
+    height: 25%;
+    width: 85%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
 
-    .header__title {
-        font-size: 1.5rem;
-        font-weight: 800;
-        color: var(--text-btn-bg);
-        padding: 1em 0;
-    }
+.header__title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-btn-bg);
+    padding: 1em 0;
+}
 
-    .header__subtitle {
-        width: 65%;
-    }
+.header__subtitle {
+    width: 65%;
+}
 
  /* Main */
 
 .main {
     background-color: var(--main-bg);
     width: 75%;
-    padding: 2em;
     margin-bottom: 2em;
     border-radius: 15px;
-    box-shadow: 5px 5px 10px rgba(75, 54, 54, 0.05);
+    box-shadow: 5px 5px 20px rgba(75, 54, 54, 0.15);
+}
+
+.interactive, 
+.info {
+    margin: 2em;
+}
+
+/* Interactive box */
+
+.views {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+    margin: 1em;
+}
+
+.views__result,
+.views  {
+    font-weight: 800;
+    font-size: 0.75rem;
 }
