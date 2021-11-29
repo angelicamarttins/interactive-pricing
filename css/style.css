@@ -22,4 +22,21 @@
     --toggle-bg: hsl(223, 50%, 87%);
     --text: hsl(225, 20%, 60%);
     --text-btn-bg: hsl(227, 35%, 25%);
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url(/images/bg-pattern.svg) no-repeat;
+}
+
+.main {
+    width: 80%;
+    background-color: var(--main-bg);
+    padding: 2em;
+    margin: 1em;
 }
