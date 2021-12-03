@@ -22,7 +22,8 @@
       </article>
 
       <article class="range-slider"> 
-        <input class="range-slider__input" type="range">
+        <input class="range-slider__input" id="slider" type="range" min="0" max="100" value="50">
+        <div class="selector" id="selector"></div>
       </article>
 
       <article class="price"> 
@@ -33,7 +34,7 @@
       <article  class="toggle">
         Monthly Billing
         <button class="toggle__btn">toggle</button>
-        Yearly Billing <span class="toggle__discount">25%</span>
+        Yearly Billing <span class="toggle__discount">-25%</span>
       </article>
       
     </section>
@@ -69,6 +70,15 @@
     <p class="attribution__author">Coded by <a href="#">Angélica Martins</a>.</p>
 
   </footer>
+
+  <script>
+    let slider = document.getElementById('slider');
+    let selector = document.getElementById('selector');
+
+    slider.oninput = function() {
+      selector.style.left = this.value + "%";
+    }
+  </script>
 </body>
 </html>
 
