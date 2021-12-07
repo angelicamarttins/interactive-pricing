@@ -23,7 +23,7 @@
 
       <article class="range-slider"> 
         <input class="range-slider__input" id="slider" type="range" min="0" max="100" value="50">
-        <div class="selector" id="selector"></div>
+        <div class="progress-bar"></div>
       </article>
 
       <article class="price"> 
@@ -70,15 +70,6 @@
     <p class="attribution__author">Coded by <a href="#">Angélica Martins</a>.</p>
 
   </footer>
-
-  <script>
-    let slider = document.getElementById('slider');
-    let selector = document.getElementById('selector');
-
-    slider.oninput = function() {
-      selector.style.left = this.value + "%";
-    }
-  </script>
 </body>
 </html>
 

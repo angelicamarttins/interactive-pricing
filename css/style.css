@@ -122,7 +122,7 @@ body {
     z-index: 1;
 }
 
-.selector {
+.progress-bar {
     width: 50%;
     height: 0.55em;
     background: var(--full-slider);
