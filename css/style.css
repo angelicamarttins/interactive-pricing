@@ -93,6 +93,10 @@ body {
 }
 
 /* Range slider */
+.range-slider {
+    position: relative;
+}
+
 .range-slider__input {
     width: 100%;
     height: 0.55rem;
@@ -122,14 +126,13 @@ body {
     z-index: 1;
 }
 
-.selector {
+.progress-bar {
     width: 50%;
-    height: 0.55em;
+    height: 0.54em;
     background: var(--full-slider);
     border-radius: 10px;
-    position: relative;
-    bottom: 39px;
-    left: 100px;
+    position: absolute;
+    top: 45%;
 }
  /* https://www.youtube.com/watch?v=Ow0QjqmaRtQ */
 /* Price */
@@ -138,6 +141,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1em;
+    letter-spacing: 1px;
 }
 
 .price__result {
@@ -145,5 +149,73 @@ body {
     font-size: 2rem;
     font-weight: 800;
     color: var(--text-btn-bg);
-    color: #434343;
+}
+
+/* Toggle */
+.toggle-box {
+    font-size: 0.75rem;
+    padding: 1em;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle__discount {
+    font-size: 0.75rem;
+}
+
+.toggle {
+    position: absolute;
+    visibility: hidden;
+}
+
+.toggle + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+.toggle__btn + label {
+    padding: 2px;
+    width: 38px;
+    height: 19px;
+    background-color: var(--toggle-bg);
+    border-radius: 60px;
+}
+
+.toggle__btn + label::before,
+.toggle__btn + label::after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: '';
+}
+.toggle__btn + label::before {
+  right: 1px;
+  background-color: var(--toggle-bg);
+  border-radius: 60px;
+  transition: all 0.4s;
+}
+.toggle__btn + label::after {
+  padding: 1px;
+  width: 12px;
+  height: 12px;
+  margin: auto;
+  margin-left: 0.25em;
+  background-color: var(--princing-comp-bg);
+  border-radius: 100%;
+  transition: all 0.4s;
+}
+
+.toggle__btn:checked + label::before {
+    background-color: var(--slider-bg);
+}
+
+.toggle__btn:checked + label::after {
+    transform: translateX(10px);
 }
