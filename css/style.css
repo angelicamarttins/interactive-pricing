@@ -1,4 +1,5 @@
 /* Imported Font */
+
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
 
 /* General Settings */
@@ -37,7 +38,7 @@ body {
     text-align: center;
 }
 
- /* Header */
+/* Header */
 
 .header {
     background: url(/images/pattern-circles.svg) no-repeat center;
@@ -62,7 +63,7 @@ body {
     font-size: 0.85rem;
 }
 
- /* Main */
+/* Main */
 
 .main {
     background-color: var(--main-bg);
@@ -73,12 +74,13 @@ body {
 }
 
 /* Interactive box */
-.interactive, 
-.info {
+
+.interactive {
     margin: 2em;
 }
 
 /* Views */
+
 .views {
     display: flex;
     justify-content: center;
@@ -94,6 +96,7 @@ body {
 }
 
 /* Range slider */
+
 .range-slider {
     position: relative;
 }
@@ -137,6 +140,7 @@ body {
 }
  /* https://www.youtube.com/watch?v=Ow0QjqmaRtQ */
 /* Price */
+
 .price {
     display: flex;
     justify-content: center;
@@ -153,15 +157,14 @@ body {
 }
 
 /* Toggle */
+
 .toggle-box {
     font-size: 0.75rem;
     margin: 1.25em 0;
-    /* width: 110%; */
     letter-spacing: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 2px solid black; */
 }
 
 .toggle__discount {
@@ -229,4 +232,47 @@ body {
 
 .toggle__btn:checked + label::after {
     transform: translateX(19px);
+}
+
+/* hr */
+
+.hr {
+    border: 1px solid var(--empty-slider);
+}
+
+/* Info box */
+ 
+.info {
+    margin: 2em;
+}
+
+/* Checklist */
+
+/* .checklist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+} */
+
+.checklist__item {
+    padding: 0.5em;
+    font-size: 0.75rem;
+}
+
+.checklist__img {
+    padding: 0 0.75em;
+}
+/* Checklist button */
+
+.checklist__button {
+    margin-top: 1.25em;
+    padding: 1.07em 1.25em;
+    width: 65%;
+    border-radius: 60px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    background-color: var(--text-btn-bg);
+    color: var(--btn-text);
+    border: none;
 }
