@@ -130,6 +130,10 @@ body {
     z-index: 1;
 }
 
+.range-slider__input::-webkit-slider-thumb:hover {
+    background-color: hsl(174, 60%, 41%);
+}
+
 .progress-bar {
     width: 50%;
     height: 0.54em;
@@ -138,7 +142,7 @@ body {
     position: absolute;
     top: 45%;
 }
- /* https://www.youtube.com/watch?v=Ow0QjqmaRtQ */
+ 
 /* Price */
 
 .price {
@@ -146,7 +150,6 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1em;
-    letter-spacing: 1px;
 }
 
 .price__result {
@@ -154,6 +157,7 @@ body {
     font-size: 2rem;
     font-weight: 800;
     color: var(--text-btn-bg);
+    letter-spacing: -1px;
 }
 
 /* Toggle */
@@ -227,7 +231,7 @@ body {
 }
 
 .toggle__btn:checked + label::before {
-    background-color: var(--slider-bg);
+    background-color: var(--full-slider);
 }
 
 .toggle__btn:checked + label::after {
