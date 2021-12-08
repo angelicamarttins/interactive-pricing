@@ -16,6 +16,7 @@
     --full-slider: hsl(174, 77%, 80%);
     --slider-bg: hsl(174, 86%, 45%);
     --discount-bg: hsl(14, 92%, 95%);
+    --discunt-text: hsl(15, 100%, 70%);
     --btn-text: hsl(226, 100%, 87%);
     --princing-comp-bg: hsl(100, 0%, 100%);
     --main-bg: hsl(230, 100%, 100%);
@@ -28,7 +29,7 @@
 
 body {
     background: url(/images/bg-pattern.svg) no-repeat;
-    height: 100%;
+    height: 87%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -40,13 +41,13 @@ body {
 
 .header {
     background: url(/images/pattern-circles.svg) no-repeat center;
-    height: 25%;
+    height: 13%;
     width: 85%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    padding: 1em;
+    padding: 4em 1em;
 }
 
 .header__title {
@@ -65,8 +66,8 @@ body {
 
 .main {
     background-color: var(--main-bg);
-    width: 75%;
-    margin-bottom: 2em;
+    width: 85%;
+    margin-bottom: 1em;
     border-radius: 15px;
     box-shadow: 5px 5px 20px rgba(75, 54, 54, 0.15);
 }
@@ -89,7 +90,7 @@ body {
 .views__result,
 .views  {
     font-weight: 800;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
 }
 
 /* Range slider */
@@ -100,7 +101,7 @@ body {
 .range-slider__input {
     width: 100%;
     height: 0.55rem;
-    margin: 2em 0;
+    margin: 1.75em 0;
     appearance: none;
 }
 
@@ -119,8 +120,8 @@ body {
     appearance: none;
     background: url(/images/icon-slider.svg) var(--slider-bg) no-repeat center;
     border-radius: 50%;
-    height: 2.5em;
-    width: 2.5em;
+    height: 2.65em;
+    width: 2.65em;
     box-shadow: 0px 15px 30px 10px var(--full-slider);
     cursor: pointer;
     z-index: 1;
@@ -154,15 +155,23 @@ body {
 /* Toggle */
 .toggle-box {
     font-size: 0.75rem;
-    padding: 1em;
-    letter-spacing: 0.5px;
+    margin: 1.25em 0;
+    /* width: 110%; */
+    letter-spacing: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* border: 2px solid black; */
 }
 
 .toggle__discount {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
+    font-weight: 800;
+    width: 35px;
+    padding: 0.3em;
+    border-radius: 60px;
+    background-color: var(--discount-bg);
+    color: var(--discunt-text);
 }
 
 .toggle {
@@ -180,8 +189,8 @@ body {
 
 .toggle__btn + label {
     padding: 2px;
-    width: 38px;
-    height: 19px;
+    width: 40px;
+    height: 18px;
     background-color: var(--toggle-bg);
     border-radius: 60px;
 }
@@ -195,18 +204,20 @@ body {
   bottom: 1px;
   content: '';
 }
+
 .toggle__btn + label::before {
   right: 1px;
   background-color: var(--toggle-bg);
   border-radius: 60px;
   transition: all 0.4s;
 }
+
 .toggle__btn + label::after {
   padding: 1px;
   width: 12px;
   height: 12px;
   margin: auto;
-  margin-left: 0.25em;
+  margin-left: 3.75px;
   background-color: var(--princing-comp-bg);
   border-radius: 100%;
   transition: all 0.4s;
@@ -217,5 +228,5 @@ body {
 }
 
 .toggle__btn:checked + label::after {
-    transform: translateX(10px);
+    transform: translateX(19px);
 }
