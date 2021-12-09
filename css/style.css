@@ -77,6 +77,9 @@ body {
 
 .interactive {
     margin: 2em;
+    display: grid;
+    grid-template-rows: repeat(4, 25%);
+    grid-template-columns: repeat(10, 10%);
 }
 
 /* Views */
@@ -87,6 +90,7 @@ body {
     align-items: center;
     letter-spacing: 2px;
     margin: 1em;
+    grid-area: 1 / 1 / 1 / 11;
 }
 
 .views__result,
@@ -99,6 +103,7 @@ body {
 
 .range-slider {
     position: relative;
+    grid-area: 2 / 1 / 2 / 11;
 }
 
 .range-slider__input {
@@ -150,6 +155,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1em;
+    grid-area: 3 / 1 / 3 / 11;
 }
 
 .price__result {
@@ -169,6 +175,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    grid-area: 4 / 1 / 4 / 11;
 }
 
 .toggle__discount {
@@ -265,7 +272,7 @@ body {
 .checklist__button {
     margin-top: 1.25em;
     padding: 1.07em 1.25em;
-    width: 65%;
+    width: 160px;
     border-radius: 60px;
     font-size: 0.75rem;
     font-weight: 800;
@@ -276,23 +283,22 @@ body {
 
 .checklist__button:hover {
     color: var(--princing-comp-bg);
+    cursor:  pointer;
 }
 
 /* Media Query */
 
-@media (min-width: 800px) {
+@media (min-width: 730px) {
     .main {
-        max-width: 33%;
+        max-width: 60%;
     }
 
     .interactive {
-        display: grid;
         grid-template-rows: repeat(3, 33%);
-        grid-template-columns: repeat(10, 10%);
     }
 
     .views {
-        grid-area: 1 / 1 / 1 / 5;
+        grid-area: 1 / 1 / 1 / 6;
     }
 
     .price {
@@ -326,3 +332,27 @@ body {
        margin-bottom: 2.25em;
     }
 } 
+
+@media (min-width: 1000px) {
+    .main {
+        max-width: 50%;
+    }
+} 
+
+@media (min-width: 1250px) {
+    .main {
+        max-width: 40%;
+    }
+} 
+
+@media (min-width: 1440px) {
+    .main {
+        max-width: 35%;
+    }
+}
+
+@media (min-width: 2000px) {
+    .main {
+        max-width: 25%;
+    }
+}
