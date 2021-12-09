@@ -175,7 +175,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    grid-area: 4 / 1 / 4 / 11;
+    grid-area: 4 / 3 / 4 / 11;
 }
 
 .toggle__discount {
@@ -313,6 +313,9 @@ body {
         grid-area: 3 / 4 / 3 / 11;
     }
 
+    .toggle__discount {
+        width: 75px;
+    }
     .info {
         display: flex; 
         justify-content: space-between;
