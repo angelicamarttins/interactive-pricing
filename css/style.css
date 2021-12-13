@@ -130,7 +130,7 @@ body {
     border-radius: 50%;
     height: 2.65em;
     width: 2.65em;
-    box-shadow: 0px 15px 30px 10px var(--full-slider);
+    box-shadow: 0px 15px 30px 5px var(--full-slider);
     cursor: pointer;
     z-index: 1;
 }
@@ -187,6 +187,8 @@ body {
     background-color: var(--discount-bg);
     color: var(--discunt-text);
 }
+
+/* Toggle button */
 
 .toggle {
     position: absolute;
