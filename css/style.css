@@ -29,7 +29,7 @@
 }
 
 body {
-    background: url(/images/bg-pattern.svg) no-repeat;
+    background: url(images/bg-pattern.svg) no-repeat;
     height: 87%;
     display: flex;
     flex-flow: column nowrap;
@@ -41,7 +41,7 @@ body {
 /* Header */
 
 .header {
-    background: url(/images/pattern-circles.svg) no-repeat center;
+    background: url(images/pattern-circles.svg) no-repeat center;
     height: 13%;
     width: 85%;
     display: flex;
@@ -126,7 +126,7 @@ body {
     position: relative;
     bottom: 1em;
     appearance: none;
-    background: url(/images/icon-slider.svg) var(--slider-bg) no-repeat center;
+    background: url(images/icon-slider.svg) var(--slider-bg) no-repeat center;
     border-radius: 50%;
     height: 2.65em;
     width: 2.65em;
