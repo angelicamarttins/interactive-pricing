@@ -306,7 +306,7 @@ body {
 }
 
 .attribution__author > a:hover,
-.attribution__frontend > a {
+.attribution__frontend > a:hover {
     border: 2px dashed var(--full-slider);
 }
 
