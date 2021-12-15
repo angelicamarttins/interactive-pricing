@@ -16,8 +16,6 @@ This is a solution to the [Interactive pricing component challenge on Frontend M
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -30,20 +28,15 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Mobile viewport](/design/screenshot-mobile.png)
+![Mobile viewport - toggle checked](/design/screenshot-mobile-toggle-checked.png)
+![Full viewport](/design/screenshot-full.png)
+![Full viewport - toggle checked](/design/screenshot-full-toggle-checked.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub Repository](https://github.com/angelicamarttins/interactive-pricing/)
+- Live Site URL: [Final result in GitHub Pages](https://angelicamarttins.github.io/interactive-pricing/)
 
 ## My process
 
@@ -54,35 +47,32 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- JavaScript Vanilla
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+In this project, I learned how to style a range slider with a progress bar that transforms its color according to user interaction. To make it possible, I need to use the DOM tree to change dynamically the progress bar width. However, there is a little prank about this range slider because the challenge force us to define steps in range slider. Since you can't define the slider between 0 and 100, I needed to create a object and define the key as the slider value and the value as the pageviews, the price and the value width. In this way, the progress bar width was precisely defined at the same time user interaction. Look the code:
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+const priceTable = {
+    1: ['10K', 8, 0],
+    2: ['50K', 12, 25],
+    3: ['100K', 16, 50],
+    4: ['500K', 24, 75],
+    5: ['1M', 36, 100]
+}
+
+const sliderInteraction = function() {
+    const sliderValue = Number(Object.keys(priceTable).filter(key => key === slider.value));
+    
+    const progressValue = priceTable[sliderValue][2];    
+    progressBar.style.width = `${progressValue}%`;
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I learned a lot about toggle button in CSS. This was my first styling experience with this type of button.
+In JavaScript, I've enforced the functions responsible for the DOM tree.
+Also, I managed to write the code as clean as possible and tried to define readable identifiers.
 
 ### Continued development
 
