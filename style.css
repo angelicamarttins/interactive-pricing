@@ -298,13 +298,15 @@ body {
 
 /* Attribution */
 
-.attribution__author > a {
+.attribution__author > a,
+.attribution__frontend > a {
     font-weight: 800;
     color: var(--discunt-text);
     padding: 0.05em;
 }
 
-.attribution__author > a:hover {
+.attribution__author > a:hover,
+.attribution__frontend > a {
     border: 2px dashed var(--full-slider);
 }
 
