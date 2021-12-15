@@ -1,6 +1,6 @@
-.style-guide.md
-..README-template.md
-/design
+style-guide.md
+README-template.md
+design
 *.sketch
 *.fig
 *.xd
