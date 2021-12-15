@@ -7,7 +7,7 @@ const priceTable = {
     5: ['1M', 36, 100]
 }
 
-// Input
+// Getting input
 const windowWidth = window.innerWidth; // Catch the viewport size
 const views = document.querySelector('.views__result'); // Show the views result
 const price = document.querySelector('.price__result'); // Show the price result
@@ -43,5 +43,4 @@ const sliderInteraction = function() {
 
 discountSpan();
 slider.oninput = sliderInteraction;
-
 toggleBtn.addEventListener('change', sliderInteraction);
